@@ -8,6 +8,7 @@ app.use(express.json());
 
 // Mount auth routes at /api/auth
 app.use('/api/auth', auth_router);
+app.use('/api/home', require('./route/home-route'));
 
 // 404 handler
 app.use((req, res) => {
